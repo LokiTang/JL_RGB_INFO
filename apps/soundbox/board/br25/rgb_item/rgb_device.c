@@ -56,7 +56,7 @@ void item_rainbow_cycle_with_energy(void)
 #endif
     for (u8 i = 0; i < LED_NUM_MAX; i++)
     {
-        HSVtoRGB( &rgb_info.color_r, &rgb_info.color_g, &rgb_info.color_b,rgb_array[i].h, rgb_array[i].s, rgb_array[i].v);
+        __RGB_HSV_MATCH( &rgb_info.color_r, &rgb_info.color_g, &rgb_info.color_b,rgb_array[i].h, rgb_array[i].s, rgb_array[i].v);
         user_rgb_send_buf(rgb_info.color_r, rgb_info.color_g, rgb_info.color_b, i);
     }
 #if SYS_TYPE_DAC_ENERGY
@@ -87,7 +87,7 @@ void item_rainbow_cycle_with_fourth_fir(void)
     hsv_info.multiple_hue++;
 #endif
     for (u8 i = 0; i < LED_NUM_MAX; i += 4) {
-        HSVtoRGB(&rgb_info.color_r, &rgb_info.color_g, &rgb_info.color_b, rgb_array[i / 4].h, rgb_array[i / 4].s, rgb_array[i / 4].v);
+        __RGB_HSV_MATCH(&rgb_info.color_r, &rgb_info.color_g, &rgb_info.color_b, rgb_array[i / 4].h, rgb_array[i / 4].s, rgb_array[i / 4].v);
         
         for (u8 j = 0; j < 4; j++) {
             user_rgb_send_buf(rgb_info.color_r, rgb_info.color_g, rgb_info.color_b, i + j);
@@ -120,7 +120,7 @@ void item_rainbow_cycle_with_star_super(void)
 #endif
 
     for (u8 i = 0; i < LED_NUM_MAX; i++) {
-        HSVtoRGB(&rgb_info.color_r, &rgb_info.color_g, &rgb_info.color_b, rgb_array[i].h, rgb_array[i].s, rgb_array[i].v);
+        __RGB_HSV_MATCH(&rgb_info.color_r, &rgb_info.color_g, &rgb_info.color_b, rgb_array[i].h, rgb_array[i].s, rgb_array[i].v);
         user_rgb_send_buf(rgb_info.color_r, rgb_info.color_g, rgb_info.color_b, i);
     }
 }
@@ -152,7 +152,7 @@ void item_rainbow_cycle_with_star_infer(void)
     for (u8 i = 0; i < LED_NUM_MAX; i++) {
         u8 color_index = (i / 4 + i % 4) % LED_NUM_MAX;
 
-        HSVtoRGB(&rgb_info.color_r, &rgb_info.color_g, &rgb_info.color_b, rgb_array[color_index].h, rgb_array[color_index].s, rgb_array[color_index].v);
+        __RGB_HSV_MATCH(&rgb_info.color_r, &rgb_info.color_g, &rgb_info.color_b, rgb_array[color_index].h, rgb_array[color_index].s, rgb_array[color_index].v);
         user_rgb_send_buf(rgb_info.color_r, rgb_info.color_g, rgb_info.color_b, i);
     }
 }
@@ -183,7 +183,7 @@ void item_rainbow_cycle_with_fourth_sec(void)
 
     for (u8 i = 0; i < LED_NUM_MAX; i += 4) {
         u8 color_index = i / 4;
-        HSVtoRGB(&rgb_info.color_r, &rgb_info.color_g, &rgb_info.color_b, rgb_array[color_index].h, rgb_array[color_index].s, rgb_array[color_index].v);
+        __RGB_HSV_MATCH(&rgb_info.color_r, &rgb_info.color_g, &rgb_info.color_b, rgb_array[color_index].h, rgb_array[color_index].s, rgb_array[color_index].v);
 
         for (u8 j = 0; j < 4; j++) {
             u8 led_index = (i + j) % LED_NUM_MAX;
@@ -217,7 +217,7 @@ void item_color_transform_with_gradient(void)
     }
     for (u8 i = 0; i < LED_NUM_MAX; i++) 
     {
-        HSVtoRGB( &rgb_info.color_r, &rgb_info.color_g, &rgb_info.color_b,hsv_info.multiple_hue, hsv_info.s, hsv_info.v);
+        __RGB_HSV_MATCH( &rgb_info.color_r, &rgb_info.color_g, &rgb_info.color_b,hsv_info.multiple_hue, hsv_info.s, hsv_info.v);
         user_rgb_send_buf(rgb_info.color_r, rgb_info.color_g, rgb_info.color_b, i);
     }
 #else
@@ -225,7 +225,7 @@ void item_color_transform_with_gradient(void)
 
     for (u8 i = 0; i < LED_NUM_MAX; i++) 
     {
-        HSVtoRGB( &rgb_info.color_r, &rgb_info.color_g, &rgb_info.color_b,hsv_info.multiple_hue, hsv_info.s, hsv_info.v);
+        __RGB_HSV_MATCH( &rgb_info.color_r, &rgb_info.color_g, &rgb_info.color_b,hsv_info.multiple_hue, hsv_info.s, hsv_info.v);
         user_rgb_send_buf(rgb_info.color_r, rgb_info.color_g, rgb_info.color_b, i);
     }
 
@@ -248,11 +248,11 @@ void item_color_breathing_with_duration(void)
 
     #if BREATHE_LIKE_RAINBOW
     for (u8 i = 0; i < LED_NUM_MAX; i++) {
-        HSVtoRGB(&rgb_info.color_r, &rgb_info.color_g, &rgb_info.color_b, rgb_array[i].h, rgb_array[i].s, rgb_array[i].v);
+        __RGB_HSV_MATCH(&rgb_info.color_r, &rgb_info.color_g, &rgb_info.color_b, rgb_array[i].h, rgb_array[i].s, rgb_array[i].v);
         user_rgb_send_buf(rgb_info.color_r, rgb_info.color_g, rgb_info.color_b, i);
     }
     #else
-    HSVtoRGB(&rgb_info.color_r, &rgb_info.color_g, &rgb_info.color_b, rgb_array[hsv_info.breath_value].h, rgb_array[hsv_info.breath_value].s, rgb_array[hsv_info.breath_value].v);
+    __RGB_HSV_MATCH(&rgb_info.color_r, &rgb_info.color_g, &rgb_info.color_b, rgb_array[hsv_info.breath_value].h, rgb_array[hsv_info.breath_value].s, rgb_array[hsv_info.breath_value].v);
     color_rainbow_init(rgb_info.color_r, rgb_info.color_g, rgb_info.color_b, hsv_info.breath_value);
     #endif
     hsv_info.breath_value += hsv_info.hue_offset;
@@ -300,7 +300,7 @@ void item_color_cycle_chasing_light(void)
 
     for (u8 i = 0; i < LED_NUM_MAX; i++) {
         if (i == current_position || i == (current_position + 1) % LED_NUM_MAX || i == (current_position + 2) % LED_NUM_MAX) {
-            HSVtoRGB(&rgb_info.color_r, &rgb_info.color_g, &rgb_info.color_b, rgb_array[current_color_index].h, rgb_array[current_color_index].s, rgb_array[current_color_index].v);
+            __RGB_HSV_MATCH(&rgb_info.color_r, &rgb_info.color_g, &rgb_info.color_b, rgb_array[current_color_index].h, rgb_array[current_color_index].s, rgb_array[current_color_index].v);
         } else {
             rgb_info.color_r = 0,   \
             rgb_info.color_g = 0,   \
@@ -328,7 +328,7 @@ void hsv_stimulate_color_electronic_func(void)
     }
 
     for (u8 i = 0; i < LED_NUM_MAX; i++) {
-        HSVtoRGB(&rgb_info.color_r, &rgb_info.color_g, &rgb_info.color_b, rgb_array[i].h, rgb_array[i].s, rgb_array[i].v);
+        __RGB_HSV_MATCH(&rgb_info.color_r, &rgb_info.color_g, &rgb_info.color_b, rgb_array[i].h, rgb_array[i].s, rgb_array[i].v);
         user_rgb_send_buf(rgb_info.color_r, rgb_info.color_g, rgb_info.color_b, i);
     }
 }
@@ -342,7 +342,7 @@ void item_color_cycle_chasing_with_tail(void)
         memcpy(&rgb_array[i].v, hsv_array, sizeof(rgb_array[i].v));     
     }
 
-    HSVtoRGB(&rgb_info.color_r, &rgb_info.color_g, &rgb_info.color_b, rgb_array[hsv_info.current_led].h, rgb_array[hsv_info.current_led].s, rgb_array[hsv_info.current_led].v);
+    __RGB_HSV_MATCH(&rgb_info.color_r, &rgb_info.color_g, &rgb_info.color_b, rgb_array[hsv_info.current_led].h, rgb_array[hsv_info.current_led].s, rgb_array[hsv_info.current_led].v);
     user_rgb_send_buf(rgb_info.color_r, rgb_info.color_g, rgb_info.color_b, hsv_info.current_led);
 
     hsv_info.multiple_hue += hsv_info.hue_offset % HSV_VECTOR_MAX;
@@ -370,7 +370,7 @@ void item_color_cycle_chasing_with_single(void)
     hsv_info.current_led = (hsv_info.current_led+1) % LED_NUM_MAX;
 
     for (u8 i = 0; i < LED_NUM_MAX; i++) {
-        HSVtoRGB(&rgb_info.color_r, &rgb_info.color_g, &rgb_info.color_b, rgb_array[i].h, rgb_array[i].s, rgb_array[i].v);
+        __RGB_HSV_MATCH(&rgb_info.color_r, &rgb_info.color_g, &rgb_info.color_b, rgb_array[i].h, rgb_array[i].s, rgb_array[i].v);
         user_rgb_send_buf(rgb_info.color_r, rgb_info.color_g, rgb_info.color_b, i);
     }
 }
@@ -395,7 +395,7 @@ void item_rainbow_cycle_with_fourth_move(void)
     }
 
     for (u8 i = 0; i < LED_NUM_MAX; i += 4) {
-        HSVtoRGB(&rgb_info.color_r, &rgb_info.color_g, &rgb_info.color_b, rgb_array[i / 4].h, rgb_array[i / 4].s, rgb_array[i / 4].v);
+        __RGB_HSV_MATCH(&rgb_info.color_r, &rgb_info.color_g, &rgb_info.color_b, rgb_array[i / 4].h, rgb_array[i / 4].s, rgb_array[i / 4].v);
         
         for (u8 j = 0; j < 4; j++) {
             u8 led_index = (i + j + offset) % LED_NUM_MAX;
@@ -432,7 +432,7 @@ void item_rainbow_cycle_with_fourth_sec_move(void)
 
     for (u8 i = 0; i < LED_NUM_MAX; i += 4) {
         u8 color_index = i / 4;
-        HSVtoRGB(&rgb_info.color_r, &rgb_info.color_g, &rgb_info.color_b, rgb_array[color_index].h, rgb_array[color_index].s, rgb_array[color_index].v);
+        __RGB_HSV_MATCH(&rgb_info.color_r, &rgb_info.color_g, &rgb_info.color_b, rgb_array[color_index].h, rgb_array[color_index].s, rgb_array[color_index].v);
 
         for (u8 j = 0; j < 4; j++) {
             u8 led_index = (i + j + offset) % LED_NUM_MAX;

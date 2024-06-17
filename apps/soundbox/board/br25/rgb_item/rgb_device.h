@@ -23,6 +23,9 @@ typedef struct rgb_device
 #define  MAX_BRIGHTNESS     100
 #define  DAC_NUM_MAX        1000
 
+#define __RGB_HSV_MATCH    \
+                HSVtoRGB
+
 //h阈值的偏移量
 #define  HUE_DATA_OFFSET   (__HSV_DEVICE__) \
         {                   \
