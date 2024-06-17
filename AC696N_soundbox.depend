@@ -48278,7 +48278,7 @@
 	"system/includes.h"
 	"rgb_item/rgb_device.h"
 
-1718610984 e:\zyh_temp\696n_rgb_debug_240617\apps\soundbox\board\br25\rgb_item\rgb_device.h
+1718615475 e:\zyh_temp\696n_rgb_debug_240617\apps\soundbox\board\br25\rgb_item\rgb_device.h
 	"rgb_item/rgb_driver.h"
 
 1653530839 source:e:\zyh_temp\696n_rgb_debug_240617\cpu\br25\ledc_test.c
@@ -48472,7 +48472,7 @@
 1653530839 source:e:\zyh_temp\696n_rgb_debug_240617\cpu\br25\ui_driver\ui_common.c
 	"includes.h"
 
-1717039356 source:e:\zyh_temp\696n_rgb_debug_240617\apps\soundbox\task_manager\bt\bt.c
+1718611182 source:e:\zyh_temp\696n_rgb_debug_240617\apps\soundbox\task_manager\bt\bt.c
 	"system/includes.h"
 	"media/includes.h"
 	"app_config.h"

@@ -5773,21 +5773,21 @@ OUTPUT(cpu\br25\tools\sdk.elf elf32-pi32v2)
  .debug_frame   0x0001128c       0xb8 include_lib/liba/br25/lib_adpcm_code.a(en_adpcm_main.o)
  .debug_frame   0x00011344       0x64 include_lib/liba/br25/lib_adpcm_code.a(en_adpcm.o)
 
-.debug_line     0x00000000    0x6d3cf
- .debug_line    0x00000000    0x6bbce cpu\br25\tools\sdk.elf.o
- .debug_line    0x0006bbce       0x30 obj/Release/apps/soundbox/sdk_version.z.o
- .debug_line    0x0006bbfe      0x108 include_lib/liba/br25/cpu.a(startup.S.o)
- .debug_line    0x0006bd06       0xb3 include_lib/liba/br25/system.a(movable.S.o)
- .debug_line    0x0006bdb9       0xb2 include_lib/liba/br25/system.a(port_asm_mmu.S.o)
- .debug_line    0x0006be6b       0x2c include_lib/liba/br25/btstack.a(version.z.o)
- .debug_line    0x0006be97       0x2c include_lib/liba/br25/btctrler.a(version.z.o)
- .debug_line    0x0006bec3       0x2c include_lib/liba/br25/media.a(version.z.o)
- .debug_line    0x0006beef       0x2c include_lib/liba/br25/update.a(version.z.o)
- .debug_line    0x0006bf1b      0x31e include_lib/liba/br25/lib_mp2_code.a(mp2code_main.o)
- .debug_line    0x0006c239      0x7ff include_lib/liba/br25/lib_mp2_code.a(encodemp2.o)
- .debug_line    0x0006ca38      0x324 include_lib/liba/br25/lib_mp2_code.a(mp2dsp.o)
- .debug_line    0x0006cd5c      0x1c4 include_lib/liba/br25/lib_adpcm_code.a(en_adpcm_main.o)
- .debug_line    0x0006cf20      0x4af include_lib/liba/br25/lib_adpcm_code.a(en_adpcm.o)
+.debug_line     0x00000000    0x6d3d2
+ .debug_line    0x00000000    0x6bbd1 cpu\br25\tools\sdk.elf.o
+ .debug_line    0x0006bbd1       0x30 obj/Release/apps/soundbox/sdk_version.z.o
+ .debug_line    0x0006bc01      0x108 include_lib/liba/br25/cpu.a(startup.S.o)
+ .debug_line    0x0006bd09       0xb3 include_lib/liba/br25/system.a(movable.S.o)
+ .debug_line    0x0006bdbc       0xb2 include_lib/liba/br25/system.a(port_asm_mmu.S.o)
+ .debug_line    0x0006be6e       0x2c include_lib/liba/br25/btstack.a(version.z.o)
+ .debug_line    0x0006be9a       0x2c include_lib/liba/br25/btctrler.a(version.z.o)
+ .debug_line    0x0006bec6       0x2c include_lib/liba/br25/media.a(version.z.o)
+ .debug_line    0x0006bef2       0x2c include_lib/liba/br25/update.a(version.z.o)
+ .debug_line    0x0006bf1e      0x31e include_lib/liba/br25/lib_mp2_code.a(mp2code_main.o)
+ .debug_line    0x0006c23c      0x7ff include_lib/liba/br25/lib_mp2_code.a(encodemp2.o)
+ .debug_line    0x0006ca3b      0x324 include_lib/liba/br25/lib_mp2_code.a(mp2dsp.o)
+ .debug_line    0x0006cd5f      0x1c4 include_lib/liba/br25/lib_adpcm_code.a(en_adpcm_main.o)
+ .debug_line    0x0006cf23      0x4af include_lib/liba/br25/lib_adpcm_code.a(en_adpcm.o)
 
 .debug_aranges  0x00000000       0x68
  .debug_aranges
