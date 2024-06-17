@@ -1,0 +1,8 @@
+{
+    "files.associations": {
+        "includes.h": "c",
+        "spp_trans_data.h": "c",
+        "rgb_device.h": "c",
+        "rgb_driver.h": "c"
+    }
+}

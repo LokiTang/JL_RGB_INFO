@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_layout_file>
+	<FileVersion major="1" minor="0" />
+	<ActiveTarget name="Release" />
+	<File name="apps\common\third_party_profile\jieli\online_db\online_db_deal.c" open="0" top="0" tabpos="3" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="0" topLine="659" />
+		</Cursor>
+	</File>
+	<File name="apps\common\third_party_profile\jieli\online_db\spp_online_db.c" open="0" top="0" tabpos="1" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="2107" topLine="69" />
+		</Cursor>
+	</File>
+	<File name="apps\soundbox\board\br25\board_ac696x_demo\board_ac696x_demo_cfg.h" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="38333" topLine="709" />
+		</Cursor>
+	</File>
+	<File name="apps\soundbox\task_manager\bt\bt.c" open="0" top="0" tabpos="3" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="3482" topLine="111" />
+		</Cursor>
+	</File>
+	<File name="apps\soundbox\board\br25\rgb_item\rgb_device.c" open="1" top="1" tabpos="1" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="14954" topLine="412" />
+		</Cursor>
+	</File>
+</CodeBlocks_layout_file>
